@@ -1,0 +1,333 @@
+//- Extends and variables start
+
+extends ../layout/main
+
+//- HTML start
+
+block content
+
+    header.container-fliud.header-block
+        .container
+
+            .row.header-block__nav
+                .col-lg-3.col-6.logo
+                    img(src="assets/img/logo.svg")
+
+                .col-lg-6.nav
+                    ul
+                        li
+                            a(href="#about") О нас о вас за нас  
+                        li
+                            a(href="#how-to") Как зарабатывать?
+                        li
+                            a(href="#contacts") Контакты
+                        li
+                            a(href="#contacts") Контакты
+
+                .col-lg-3.col-6.button-container
+                    a(href="#" data-toggle="modal" data-target="#recallModal" data-title="Оставьте заявку, чтобы выполнить регистрацию" data-button="Зарегистрироваться" data-goal="Сel1").button Регистрация
+
+            .row.header-block__title
+                .col-lg-7.col-12.title
+                    h1 Зарегистрируйся и получи жирные кейсы по сливу трафика на бинарку
+                    h2 + гайд «Почему все переходят с гемблы к нам»
+                    a(href="#" data-toggle="modal" data-target="#recallModal" data-title="Оставьте заявку, чтобы получить кейсы" data-button="Получить кейсы" data-goal="Сel1").button Получить кейсы
+
+                .col-lg-5.col-12.rating
+                    .rating__table-container
+
+                        span.table-title Наши партнеры с максимальным доходом
+
+                        table
+                            tr
+                                th Рейтинг
+                                th ID реферала
+                                th Всего рефералов
+                                th Заработано в BTC
+                                th Заработано в USD
+
+                            tr
+                                td 
+                                    span.table__leader-number-1 1
+                                td **930
+                                td 12498
+                                td 51.93369193
+                                td 471,911
+
+                            tr
+                                td
+                                    span.table__leader-number-2 2
+                                td **447
+                                td 8295
+                                td 35.63832711
+                                td 323,838
+
+                            tr
+                                td
+                                    span.table__leader-number-3 3
+                                td **822
+                                td 6134
+                                td 28.90546239
+                                td 262,658
+
+                            tr
+                                td 4
+                                td **524
+                                td 3970
+                                td 18.79648544
+                                td 170,800
+
+                            tr
+                                td 5
+                                td **667
+                                td 2780
+                                td 17.04070807
+                                td 154,846
+
+                            tr
+                                td 6
+                                td **610
+                                td 559
+                                td 7.56497190
+                                td 68,741
+
+                            tr
+                                td 7
+                                td **076
+                                td 767
+                                td 7.36032636
+                                td 66,882
+
+                            tr
+                                td 8
+                                td **270
+                                td 2554
+                                td 7.02433415
+                                td 63,829
+
+                            tr
+                                td 9
+                                td **960
+                                td 1711
+                                td 6.94697428
+                                td 63,126
+
+                            tr
+                                td 10
+                                td **970
+                                td 591
+                                td 6.89971264
+                                td 62,696
+
+    section.container-fluid.points-bloc#about
+        .container
+            .row.points
+                .col-lg-3.col-12
+                    .points__point-container
+                        img(src="assets/img/icon-1.png")
+                        span Ежемесячный прирост арбитражников х2
+
+                .col-lg-3.col-12
+                    .points__point-container
+                        img(src="assets/img/icon-2.png")
+                        span Делимся реальными связками
+
+                .col-lg-3.col-12
+                    .points__point-container
+                        img(src="assets/img/icon-3.png")
+                        span Предоставляем бесплатный аккаунт
+
+                .col-lg-3.col-12
+                    .points__point-container
+                        img(src="assets/img/icon-4.png")
+                        span Поддерживаем веб-мастеров 24/7
+
+            .row
+                .col-12.button-container
+                    a(href="#" data-toggle="modal" data-target="#recallModal" data-title="Оставьте заявку, если хотите зарабатывать" data-button="Хочу зарабатывать" data-goal="Сel1").button Хочу зарабатывать
+
+    section.container-fluid.case-block#how-to
+        .container
+            .row.title
+                .col-12
+                    h1 Работающий кейс июль 2020
+
+            .row.content
+                .col-lg-9.col-12
+                    .content__text-container
+                        p 
+                            span.accent-color Было: 
+                            | Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute
+
+                        p 
+                            span.accent-color Стало: 
+                            | at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute
+
+                        p Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer
+
+                    a(href="#" data-toggle="modal" data-target="#recallModal" data-title="Оставьте заявку, если хотите зарабатывать" data-button="Хочу зарабатывать" data-goal="Сel1").button Хочу зарабатывать
+
+                    img(src="assets/img/pc.png")
+
+    section.container-fluid.offers-block
+        .container
+            .row
+                .col-12
+                    h1  На каких офферах можно 
+                        br
+                        | заработать 
+                        span.accent-color прямо сейчас
+
+            .row.offers
+                .col-lg-3.col-12.offers__offer-container
+                    .offer-title
+                        .offer-title__number 1
+                        .offer-title__text Торговля криптовалютой
+
+                    table
+                        tr
+                            td Источник:
+                            td Facebook
+                        tr
+                            td Период:
+                            td 1.05.20 - 15.06.20
+                        tr
+                            td Потрачено:
+                            td $2 144
+                        tr
+                            td Заработано:
+                            td $4 237
+                        tr
+                            td Прибыль:
+                            td $2 093
+                        tr
+                            td ROI:
+                            td 97,6%
+
+                    a(href="#" data-toggle="modal" data-target="#recallModal" data-title="Оставьте заявку, чтобы получить кейсы" data-button="Получить кейсы" data-goal="Сel1").button Получить кейсы
+                    span.offer-level * уровень Новичок
+
+                .col-lg-3.col-12.offers__offer-container
+                    .offer-title
+                        .offer-title__number 2
+                        .offer-title__text Торговля на FOREX
+
+                    table
+                        tr
+                            td Источник:
+                            td Google Ads
+                        tr
+                            td Период:
+                            td 17.05.20 - 20.06.20
+                        tr
+                            td Потрачено:
+                            td $3 574
+                        tr
+                            td Заработано:
+                            td $6 146
+                        tr
+                            td Прибыль:
+                            td $2 572
+                        tr
+                            td ROI:
+                            td 71.9%
+
+                    a(href="#" data-toggle="modal" data-target="#recallModal" data-title="Оставьте заявку, чтобы получить кейсы" data-button="Получить кейсы" data-goal="Сel1").button Получить кейсы
+                    span.offer-level * уровень Новичок
+
+                .col-lg-3.col-12.offers__offer-container
+                    .offer-title
+                        .offer-title__number 3
+                        .offer-title__text Торговля индексами
+
+                    table
+                        tr
+                            td Источник:
+                            td Тизерные сети
+                        tr
+                            td Период:
+                            td 20.04.20 - 20.05.20
+                        tr
+                            td Потрачено:
+                            td $8 911
+                        tr
+                            td Заработано:
+                            td $22 785
+                        tr
+                            td Прибыль:
+                            td $13 874
+                        tr
+                            td ROI:
+                            td 155,6%
+
+                    a(href="#" data-toggle="modal" data-target="#recallModal" data-title="Оставьте заявку, чтобы получить кейсы" data-button="Получить кейсы" data-goal="Сel1").button Получить кейсы
+                    span.offer-level * уровень PRO
+
+                .col-lg-3.col-12.offers__offer-container
+                    .offer-title
+                        .offer-title__number 4
+                        .offer-title__text Торговля сырьевыми товарами
+
+                    table
+                        tr
+                            td Источник:
+                            td Тизерные сети
+                        tr
+                            td Период:
+                            td 22.05.20 - н.в.
+                        tr
+                            td Потрачено:
+                            td $12 588
+                        tr
+                            td Заработано:
+                            td $29 411
+                        tr
+                            td Прибыль:
+                            td $16 823
+                        tr
+                            td ROI:
+                            td 133,6%
+
+                    a(href="#" data-toggle="modal" data-target="#recallModal" data-title="Оставьте заявку, чтобы получить кейсы" data-button="Получить кейсы" data-goal="Сel1").button Получить кейсы
+                    span.offer-level * уровень PRO
+
+    footer.container-fliud.footer-block
+        .container
+            .row
+                .col-6.logo
+                    img(src="assets/img/logo.svg")
+
+                .col-6.policy
+                    a(href="policy.html" target="_blank") Политика конфеденциальности
+
+    .modal.fade#recallModal(tabindex="1", role="dialog", aria-labelledby="recallModalLabel", aria-hidden="true")
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    h5#recallModalLabel.modal-title Оставьте заявку, чтобы получить удостоверение
+                    button.close(type="button", data-dismiss="modal", aria-label="Close")
+                    span(aria-hidden="true") ×
+                .modal-body
+                    form.ajax-form(data-counter=`${metrikaId}`)
+                        input(type="hidden",name="goal")
+                        input(type="hidden",name="formname")
+                        input(type="hidden",name="utm_source")
+                        input(type="hidden",name="utm_medium")
+                        input(type="hidden",name="utm_campaign")
+                        input(type="hidden",name="utm_content")
+                        input(type="hidden",name="utm_term")
+                        input(type="hidden",name="yclid")
+
+                        input(type="text",name="name",placeholder="Имя",required)
+
+                        input(type="phone",name="phone",placeholder="Телефон",required)
+
+                        input(type="submit",value="Получить удостоверение").submit-form
+
+    .modal.fade#thankyouModal
+        .modal-dialog
+            .modal-content
+                .modal-body
+                    span.popup-title Ваша заявку успешно отправлена!
+
+//- HTML end

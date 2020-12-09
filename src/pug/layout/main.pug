@@ -1,0 +1,60 @@
+include ../utils/mixins
+
+block variables
+    - var title = 'PrimeXBT – Торгуйте криптовалютой, иностранными валютами и контрактами на ценовую разницу';
+    - var websiteUrl = 'primexbt-bullet.test-101.ru';
+    - var metrikaId = '111111';
+    //- - var marquizId = '987654321'; //- Use href=`#popup:marquiz_${marquizId}`
+
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title #{title}
+
+        //- Header scripts start
+
+        block headScript
+            // Marquiz script start
+            //- script(src='//script.marquiz.ru/v1.js', type='application/javascript')
+            //- script.
+            //-     document.addEventListener("DOMContentLoaded", function() {
+            //-         Marquiz.init({
+            //-             id: '#{marquizId}',
+            //-             autoOpen: false,
+            //-             autoOpenFreq: 'once',
+            //-             openOnExit: false
+            //-         });
+            //-     });
+            // Marquiz script end
+
+        //- Header scripts end
+        
+    body
+        include ../includes/modules/header
+
+            block content
+
+        include ../includes/modules/footer
+
+        //- Footer scripts start
+
+        block footerScript
+            // Yandex.Metrika counter
+            //- script(type='text/javascript').
+            //-     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            //-     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            //-     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            //-     ym(#{metrikaId}, "init", {
+            //-         clickmap:true,
+            //-         trackLinks:true,
+            //-         accurateTrackBounce:true,
+            //-         webvisor:true
+            //-     });
+            //- noscript
+            //- div
+            //- img(src=`https://mc.yandex.ru/watch/${metrikaId}`, style='position:absolute; left:-9999px;', alt='')
+            // /Yandex.Metrika counter
+
+        //- Footer scripts end

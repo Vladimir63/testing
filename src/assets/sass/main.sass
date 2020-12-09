@@ -1,0 +1,456 @@
+@import "utils/mixins"
+@import "utils/reset"
+
+@include fontFace('OpenSans', '../fonts/OpenSans')
+@include fontFace('OpenSans-Bold', '../fonts/OpenSans-Bold')
+
+$positive-color:                #fff
+$negative-color:                #000
+$accent-color:                  #48a9e9
+$secondary-accent-color:        #3179a9
+$dark-accent-color:             #06092a
+$dark-accent-color-07-opacity:  rgba(6, 9, 42, 0.7)
+$divider-color:                 #e9eff1
+$accent-table-color-1:          #c5ab18
+$accent-table-color-2:          #b5b7c9
+$accent-table-color-3:          #c08b57
+$accent-table-color-4:          #20daa8
+$secondary-text-color:          #b0afaf
+
+html
+    font-size: 20px
+    height: 100%
+    width: 100%
+
+body
+    font-family: OpenSans
+    color: $negative-color
+    height: 100%
+    width: 100%
+    font-size: 0.8rem
+
+section
+    padding: 3rem 0
+
+h1
+    font-family: OpenSans-Bold
+    font-size: 2.75rem
+    padding-bottom: 2rem
+
+    @media screen and ( max-width: 500px )
+        font-size: 1.5rem
+
+h2
+    font-family: OpenSans
+    font-size: 1.25rem
+
+    @media screen and ( max-width: 500px )
+        font-size: 1rem
+
+a
+    color: $accent-color
+    text-decoration: none
+    transition: 400ms
+
+    &:hover
+        color: $accent-color
+        text-decoration: none
+        opacity: 0.5
+
+.accent-color
+    color: $accent-color
+
+.button
+    display: inline-block
+    background-color: $accent-color
+    color: $positive-color
+    padding: 0.5rem 1.5rem
+    border-radius: 0.25rem
+    box-shadow: 0 0.65rem 0.65rem 0 rgba(0, 0, 0, 0.1)
+    cursor: pointer
+    transition: 400ms
+
+    &:hover
+        background-color: $secondary-accent-color
+        box-shadow: none
+        opacity: 1
+        color: $positive-color
+
+
+.header-block
+    padding-bottom: 10rem
+    background: url(../img/bg-1.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+    @media screen and ( max-width: 500px )
+        padding-bottom: 3rem
+
+.header-block__nav
+    padding-top: 1rem
+
+    .logo,
+    .nav,
+    .button-container
+        display: flex
+        align-items: center
+        justify-content: flex-start
+
+        img
+            width: 10rem
+
+    .nav
+        justify-content: center
+
+        @media screen and ( max-width: 500px )
+            display: none
+
+        ul
+            li
+                display: inline
+                margin-right: 2rem
+                font-size: 0.8rem
+
+                &:last-child
+                    margin-right: 0
+
+                a
+                    color: $positive-color
+
+    .button-container
+        justify-content: flex-end
+
+.header-block__title
+    padding-top: 8rem
+
+    @media screen and ( max-width: 500px )
+        padding-top: 0
+
+    .title
+
+        h1,
+        h2
+            color: $positive-color
+
+        h1
+            padding-top: 2rem
+
+        .button
+            margin-top: 2rem
+
+    .rating
+        display: flex
+        align-items: center
+        justify-content: center
+
+        @media screen and ( max-width: 500px )
+            display: block
+            margin-top: 2rem
+
+        .rating__table-container
+            background-color: $dark-accent-color-07-opacity
+            border-radius: 0.25rem
+            padding: 1rem
+
+            .table-title
+                display: block
+                text-align: center
+                font-family: OpenSans-Bold
+                color: $positive-color
+                padding-bottom: 0.5rem
+
+                @media screen and ( max-width: 500px )
+                    font-size: 0.7rem
+
+            table
+                color: $positive-color
+                font-size: 0.55rem
+
+                tr
+
+                    td
+                        padding: 0.3rem 0.5rem
+
+                        @media screen and ( max-width: 500px )
+                            text-align: center
+
+                        &:first-child
+                            text-align: center
+
+                        &:nth-child(2),
+                        &:nth-child(3)
+                            
+                            @media screen and ( max-width: 500px )
+                                display: none
+
+                        &:nth-child(4),
+                        &:nth-child(5)
+                            color: $accent-table-color-4
+
+                        .table__leader-number-1,
+                        .table__leader-number-2,
+                        .table__leader-number-3
+                            width: 1rem;
+                            height: 1rem;
+                            display: inline-block;
+                            border-radius: 50%
+
+                        .table__leader-number-1
+                            color: $accent-table-color-1
+                            border: 0.05rem solid $accent-table-color-1
+
+                        .table__leader-number-2
+                            color: $accent-table-color-2
+                            border: 0.05rem solid $accent-table-color-2
+
+                        .table__leader-number-3
+                            color: $accent-table-color-3
+                            border: 0.05rem solid $accent-table-color-3
+                            
+
+                    th
+                        border-top: 0.05rem solid $positive-color
+                        border-bottom: 0.05rem solid $positive-color
+                        padding: 0.5rem 0.5rem
+                        font-weight: 400
+
+                        @media screen and ( max-width: 500px )
+                            text-align: center
+
+                        &:nth-child(2),
+                        &:nth-child(3)
+                            
+                            @media screen and ( max-width: 500px )
+                                display: none
+
+.points-block
+    background-color: $divider-color
+
+    .points
+
+        .points__point-container
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            padding: 1.5rem
+            text-align: center
+            background: $positive-color
+            border-radius: 0.5rem
+            box-shadow: 0 1.3rem 1.9rem 0 rgba(0, 0, 0, 0.14)
+            transition: 400ms
+
+            &:hover
+                box-shadow: none
+
+            @media screen and ( max-width: 500px )
+                margin-bottom: 1rem
+                padding: 1rem
+
+            span
+                padding-top: 1.5rem
+
+    .button-container
+        text-align: center
+        margin-top: 2rem
+
+        @media screen and ( max-width: 500px )
+            margin-top: 0
+
+.case-block
+    background: url(../img/bg-2.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+    h1
+        color: $positive-color
+        text-align: center
+
+    .content__text-container
+        padding: 3rem
+        background: $dark-accent-color-07-opacity
+        border-radius: 0.5rem
+        color: $positive-color
+
+        @media screen and ( max-width: 500px )
+            padding: 1rem
+
+        p
+            padding-bottom: 1.5rem
+
+            &:nth-child(3)
+                width: 70%
+
+                @media screen and ( max-width: 500px )
+                    width: 100%
+
+    img
+        position: absolute
+        bottom: -3rem
+        right: -24rem
+
+        @media screen and ( max-width: 1300px )
+            width: 33rem
+            right: -16rem
+
+        @media screen and ( max-width: 500px )
+            display: none
+
+    .button
+        margin-top: 1rem
+
+.offers-block
+    background-color: $divider-color
+
+    h1
+        text-align: center
+        color: $negative-color
+
+    .offers__offer-container
+        display: flex
+        flex-direction: column
+        transition: 400ms
+
+        @media screen and ( max-width: 500px )
+            margin-bottom: 2rem
+
+            &:last-child
+                margin-bottom: 0
+
+        &:hover
+            .offer-title
+                box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.2)
+
+            .button
+                background-color: $secondary-accent-color
+                box-shadow: none
+                opacity: 1
+                color: $positive-color
+
+        .offer-title
+            display: flex
+            align-items: center
+            margin-bottom: 1rem
+            background: $positive-color
+            border-radius: 0.5rem
+            box-shadow: 0 1.3rem 1.9rem 0 rgba(0, 0, 0, 0.14)
+            transition: 400ms
+
+            .offer-title__number
+                display: flex
+                align-items: center
+                justify-content: center
+                font-family: OpenSans-Bold
+                font-size: 2rem
+                color: $positive-color
+                width: 4rem
+                height: 4rem
+                background-image: linear-gradient( 145deg, rgb(4,70,124) 0%, rgb(3,10,53) 100%)
+                border-top-left-radius: 0.5rem
+                border-bottom-left-radius: 0.5rem
+
+            .offer-title__text
+                padding: 0 1rem
+                width: 65%
+
+        table
+            tr
+                td
+                    font-size: 0.65rem
+                    padding: 0.25rem 0
+                    text-align: left
+                    font-family: OpenSans-Bold
+
+                    &:last-child
+                        text-align: right
+                        font-family: OpenSans
+
+        .button
+            margin-top: 1rem
+            text-align: center
+
+        .offer-level
+            display: block
+            color: $secondary-text-color
+            margin-top: 0.5rem
+            text-align: center
+
+.footer-block
+    padding: 2rem 0
+    background: $dark-accent-color
+
+    .logo
+        display: flex
+        align-items: center
+        justify-content: flex-start
+
+        img
+            width: 10rem
+
+    .policy
+        display: flex
+        align-items: center
+        justify-content: flex-end
+
+        a
+            color: $positive-color
+
+            @media screen and ( max-width: 500px )
+                font-size: 0.7rem
+
+.modal-header
+    border-bottom: 0
+
+    .modal-title
+        font-family: OpenSans
+        font-size: 1.2rem
+        text-align: center
+
+.ajax-form
+    color: $negative-color
+
+    input
+        display: block
+
+    input
+        width: 100%
+        transition: 400ms
+        font-size: 0.9rem
+        font-family: OpenSans
+        text-align: center
+        color: $negative-color
+        border: 0.05rem solid $divider-color
+        margin-bottom: 1rem
+        padding: 0.5rem 1.5rem
+        border-radius: 0.25rem
+
+        &::placeholder
+            color: $negative-color
+
+        &:focus
+            border: 0.05rem solid $accent-color
+
+        @media screen and ( max-width: 500px )
+            margin-bottom: 0.5rem
+
+    .submit-form
+        background-color: $accent-color
+        color: $positive-color
+        cursor: pointer
+        transition: 400ms
+        box-shadow: 0 0.65rem 0.65rem 0 rgba(0, 0, 0, 0.1)
+
+        &:hover
+            background-color: $secondary-accent-color
+            box-shadow: none
+            opacity: 1
+            color: $positive-color
+
+.policy-page
+    padding: 2rem 0
+    color: $negative-color
+
+    p
+        margin-bottom: 1rem
