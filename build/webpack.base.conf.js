@@ -10,7 +10,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 // Start config host and paths
 
-const HOSTNAME = 'test'
+const HOSTNAME = 'testing'
 
 const PATHS = {
     src: path.join(__dirname, '../src'),
